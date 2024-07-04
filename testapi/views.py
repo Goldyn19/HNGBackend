@@ -20,7 +20,7 @@ class HelloAPIView(APIView):
         return data
 
     def get_weather(self, city):
-        api_key = '30d26fa8203097de174999f65a65a640 '
+        api_key = '30d26fa8203097de174999f65a65a640'
         weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
         response = requests.get(weather_url)
         data = response.json()
